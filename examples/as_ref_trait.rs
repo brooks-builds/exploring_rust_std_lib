@@ -15,15 +15,15 @@ impl AsRef<i32> for Entity {
     }
 }
 
-fn print_name(entity_name: &str) {
+fn _print_name(entity_name: &str) {
     println!("{}", entity_name);
 }
 
-fn print_health(entity_health: &i32) {
+fn _print_health(entity_health: &i32) {
     println!("{}", entity_health);
 }
 
-fn print_string(string: &str) {
+fn _print_string(string: &str) {
     println!("{}", string);
 }
 

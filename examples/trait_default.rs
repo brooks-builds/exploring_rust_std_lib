@@ -13,7 +13,7 @@ struct Velocity {
 impl Velocity {
     // This allows us to manully have default values for what is passed in. However it does
     // look pretty terrible. We can use the Into trait to make it a bit nicer.
-    fn new(x: Option<f32>, y: Option<f32>) -> Self {
+    fn _new(x: Option<f32>, y: Option<f32>) -> Self {
         Self {
             x: x.unwrap_or(5.0),
             y: y.unwrap_or_default(),
@@ -61,6 +61,7 @@ impl Default for Entity {
 }
 
 #[derive(Debug)]
+#[allow(dead_code)]
 enum Direction {
     Up,
     Down,

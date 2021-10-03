@@ -2,7 +2,7 @@
 struct CustomNumber(i32);
 
 struct Entity {
-    id: u32,
+    _id: u32,
     health: CustomNumber,
 }
 
@@ -13,5 +13,5 @@ impl PartialEq for Entity {
 }
 
 fn main() {
-    dbg!(() == ());
+    // dbg!(() == ());
 }

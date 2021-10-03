@@ -1,17 +1,18 @@
 struct Something {
-    thing: ThirdThing,
+    _thing: ThirdThing,
 }
 
-impl Copy for Something {}
+// This does not work
+// impl Copy for Something {}
 
 impl Clone for Something {
     fn clone(&self) -> Self {
-        Self { thing: ThirdThing }
+        Self { _thing: ThirdThing }
     }
 }
 
 // #[derive(Copy, Clone)]
-struct SomethingElse {
+struct _SomethingElse {
     thing: ThirdThing,
 }
 
@@ -21,7 +22,7 @@ struct ThirdThing;
 struct ThisCanBeCopied;
 
 fn main() {
-    let something = Something { thing: ThirdThing };
-    let copy_of_something = something;
-    dbg!(something, copy_of_something);
+    let something = Something { _thing: ThirdThing };
+    let _copy_of_something = something;
+    // dbg!(something, copy_of_something);
 }

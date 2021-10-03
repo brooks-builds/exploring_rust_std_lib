@@ -1,13 +1,11 @@
-use std::{
-    collections::{hash_map::DefaultHasher, HashMap},
-    hash::Hash,
-};
+use std::{collections::hash_map::DefaultHasher, hash::Hash};
 
 #[derive(Debug, PartialEq, Eq)]
 struct CustomNumber {
     number: i32,
 }
 
+#[allow(clippy::derive_hash_xor_eq)]
 impl std::hash::Hash for CustomNumber {
     fn hash<H: std::hash::Hasher>(&self, state: &mut H) {
         self.number.hash(state);

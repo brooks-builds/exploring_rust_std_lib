@@ -12,6 +12,7 @@ fn main() {
     array_maps();
 }
 
+#[allow(dead_code)]
 fn play_with_arrays() {
     let names = ["John", "Jane", "Mary", "Patricia"];
     let zeros = [Size(0); 5];
@@ -21,7 +22,7 @@ fn play_with_arrays() {
         Location::default(),
     ];
     dbg!(zeros);
-    let [john, jane, mary, patricia] = names;
+    let [john, _jane, _mary, _patricia] = names;
     dbg!(john);
     dbg!(names);
 

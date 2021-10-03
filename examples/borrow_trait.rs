@@ -19,6 +19,6 @@ fn main() {
         },
         42,
     );
-    let foo = entities.get("foo");
-    dbg!(foo);
+    // let foo = entities.get("foo");
+    // dbg!(foo);
 }

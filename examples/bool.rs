@@ -1,9 +1,9 @@
 fn main() {
     dbg!(1 == true.into());
 
-    if false | false {
-        dbg!("true & true");
-    }
+    // if false | false {
+    //     dbg!("true & true");
+    // }
 
     let something = 5 > 3;
 
@@ -12,7 +12,7 @@ fn main() {
     //     false => todo!(),
     // }
 
-    assert!(false);
+    // assert!(false);
 
-    let something_else = something.then(|| String::from("hello"));
+    let _something_else = something.then(|| String::from("hello"));
 }

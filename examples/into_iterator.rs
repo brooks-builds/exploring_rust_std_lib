@@ -1,4 +1,4 @@
-const LOCATION_SIZE: usize = 2;
+const _LOCATION_SIZE: usize = 2;
 
 #[derive(Debug)]
 struct Location {
