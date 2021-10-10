@@ -1,10 +1,4 @@
-use std::{
-    collections::{
-        hash_map::{DefaultHasher, RandomState},
-        HashMap,
-    },
-    hash::Hasher,
-};
+use std::collections::{hash_map::RandomState, HashMap};
 
 fn main() {
     let mut data: HashMap<String, i32, RandomState> = HashMap::new();

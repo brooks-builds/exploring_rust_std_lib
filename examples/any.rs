@@ -1,7 +1,4 @@
-use std::{
-    any::{Any, TypeId},
-    fmt::Debug,
-};
+use std::{any::Any, fmt::Debug};
 
 #[derive(Debug)]
 struct Location {

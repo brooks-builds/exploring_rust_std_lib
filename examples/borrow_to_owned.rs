@@ -26,5 +26,5 @@ fn main() {
     let cloned_location = location.to_owned();
     dbg!(location, cloned_location);
 
-    let hello = "hello world".to_owned();
+    let _hello = "hello world".to_owned();
 }
