@@ -1,4 +1,4 @@
-use std::cell::UnsafeCell;
+use std::{cell::UnsafeCell, mem::MaybeUninit};
 
 #[derive(Debug, Default)]
 struct Location {
@@ -36,6 +36,18 @@ fn main() {
     into_inner();
     from_location();
     default();
+    raw_get();
+}
+
+fn raw_get() {
+    let location = MaybeUninit::<UnsafeCell<Location>>::uninit();
+    let mut location = unsafe {
+        let pointer = UnsafeCell::raw_get(location.as_ptr());
+        (*pointer).x = 10.0;
+        (*pointer).y = 20.0;
+        location.assume_init()
+    };
+    dbg!(location.get_mut());
 }
 
 fn using_custom_refcell() {
