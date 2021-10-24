@@ -1,5 +1,6 @@
 use std::{any::Any, fmt::Debug};
 
+/// Location struct for displaying where we are?
 #[derive(Debug)]
 struct Location {
     x: f32,

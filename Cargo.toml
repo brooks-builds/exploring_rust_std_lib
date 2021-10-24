@@ -4,7 +4,11 @@ version = "0.1.0"
 edition = "2021"
 rust-version = "1.56"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+# This doesn't work here. Put the ENV configuration in $PROJECT_HOME/.config/config.toml
+# [env]
+# TMPDIR = { value = "/home/tmp", force = true }
+# OPENSSL_DIR = { value = "vendor/openssl", relative = true }
+
 
 [dependencies]
 thiserror = "1.0.29"
