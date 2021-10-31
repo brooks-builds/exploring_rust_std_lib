@@ -13,3 +13,5 @@ rust-version = "1.56"
 [dependencies]
 thiserror = "1.0.29"
 anyhow = "1.0.44"
+textplots = "0.8.0"
+rgb = "0.8.29"
